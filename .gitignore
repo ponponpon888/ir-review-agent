@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# ツールのキャッシュ
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# 秘密情報。.env.example だけを追跡する
+.env
+.env.*
+!.env.example
+
+# 生成物（レビュー結果）
+out/
+out_*
+report.md
+*.zip

@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: 依存のインストール
+        run: pip install -e ".[dev,llm,api]"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: フォーマット確認
+        run: ruff format --check .
+
+      - name: 型チェック
+        run: mypy
+
+      # APIキーを使わずに全件通ることが、この構成の要点
+      - name: テスト
+        run: pytest -q
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: イメージのビルド確認
+        run: docker build -t ir-review-agent .

@@ -1,0 +1,58 @@
+# IR開示資料の用語集（サンプル）
+#
+# ja           : 原文での正式表記
+# en           : この文書で必ず使う英訳
+# aliases      : 原文で使われがちな揺れ表記（見つけたら ja に寄せるよう指摘する）
+# forbidden_en : 使ってはいけない英訳（誤解を招く定訳を潰す）
+# note         : 翻訳時にLLMへ渡す補足
+
+- ja: 連結売上高
+  en: consolidated net sales
+  aliases: [連結売上, 売上高（連結）]
+  forbidden_en: [consolidated revenue, consolidated turnover]
+  note: 損益計算書の科目名に合わせる
+
+- ja: 営業利益
+  en: operating income
+  aliases: [営業益]
+  forbidden_en: [operating profit]
+
+- ja: 経常利益
+  en: ordinary income
+  aliases: [経常益]
+  forbidden_en: [recurring profit, pre-tax profit]
+  note: 日本基準固有の科目のため、IFRSの語に置き換えないこと
+
+- ja: 親会社株主に帰属する当期純利益
+  en: profit attributable to owners of parent
+  aliases: [当期純利益（親会社株主帰属）, 最終利益]
+  forbidden_en: [net income]
+
+- ja: 自己資本比率
+  en: equity ratio
+  aliases: [自己資本比率（連結）]
+  forbidden_en: [capital adequacy ratio]
+  note: 金融機関の自己資本比率規制とは別物なので capital adequacy ratio は使わない
+
+- ja: 通期業績予想
+  en: full-year earnings forecast
+  aliases: [通期予想, 年間業績予想]
+  forbidden_en: [full-year guidance]
+
+- ja: 中期経営計画
+  en: medium-term management plan
+  aliases: [中計, 中期計画]
+  forbidden_en: [mid-term business plan]
+
+- ja: 株主還元
+  en: shareholder returns
+  aliases: [株主への還元]
+
+- ja: 配当性向
+  en: dividend payout ratio
+  aliases: [配当性向（連結）]
+
+- ja: 有利子負債
+  en: interest-bearing debt
+  aliases: [有利子負債残高]
+  forbidden_en: [debt with interest]
